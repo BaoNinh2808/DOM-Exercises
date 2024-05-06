@@ -61,6 +61,12 @@
         const submit = document.querySelector("button[type='submit']");
         submit.addEventListener("click", (e) => {
             e.preventDefault();
+
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords must match!");
+                confirmPassword.reportValidity();
+                return;
+            }
             alert("Thank you for your submission!");
         });
 
