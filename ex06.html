@@ -62,6 +62,9 @@
             item.classList.add('list-group-item');
             item.innerText = keyword.value;
             myList.insertBefore(item, myList.firstChild);
+            
+            //clear input field
+            keyword.value = '';
         });
 
         
